@@ -29,9 +29,8 @@ new_weather = weather[1:length]
 #CHECK IF THE VALUES IN ONE LIST ARE ALSO IN ANOTHER LIST (GIVEN A LIST "NEW_WEATHER")
 weather_types = ["Rain", "Sunny", "Fog", "Fog-Rain", "Thunderstorm", "Type of Weather"]
 weather_type_found = []
-
 for item in weather_types:
     found = item in new_weather
     weather_type_found.append(found)
-    
-print(weather_type_found)
+ print(weather_type_found)
+
