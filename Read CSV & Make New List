@@ -1,3 +1,4 @@
+#READ CSV AND MAKE A LIST
 f = open("la_weather.csv", "r")
 data = f.read()
 rows = data.split("\n")
@@ -5,6 +6,13 @@ rows = data.split("\n")
 weather_data = []
 for row in rows:
     split_row = row.split(",")
-    weather_data.append(split_row)
-    
+    weather_data.append(split_row)  
 print(weather_data)
+
+#MAKE A LIST OF ONLY THE SECOND ITEM IN EACH ROW (AKA ONLY THE SECOND COLUMN OF THE DATASET
+weather = []
+for rows in weather_data:
+    value = rows[1]
+    weather.append(value)
+print(weather_data)
+
