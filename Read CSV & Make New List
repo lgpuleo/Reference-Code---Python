@@ -9,10 +9,29 @@ for row in rows:
     weather_data.append(split_row)  
 print(weather_data)
 
-#MAKE A LIST OF ONLY THE SECOND ITEM IN EACH ROW (AKA ONLY THE SECOND COLUMN OF THE DATASET
+#MAKE A LIST OF ONLY THE SECOND ITEM IN EACH ROW (AKA ONLY THE SECOND COLUMN OF THE DATA SET)
 weather = []
 for rows in weather_data:
     value = rows[1]
     weather.append(value)
 print(weather_data)
 
+#COUNT THE NUMBER OF ROWS IN THE DATA SET (THE NUMBER OF ITEMS IN "WEATHER")
+count = 0
+for items in weather:
+    count += 1
+print(count)
+
+#SLICE THE WEATHER LIST TO REMOVE THE HEADER AND ASSIGN THE SLICE TO NEW_WEATHER
+length = len(weather)
+new_weather = weather[1:length]
+
+#CHECK IF THE VALUES IN ONE LIST ARE ALSO IN ANOTHER LIST (GIVEN A LIST "NEW_WEATHER")
+weather_types = ["Rain", "Sunny", "Fog", "Fog-Rain", "Thunderstorm", "Type of Weather"]
+weather_type_found = []
+
+for item in weather_types:
+    found = item in new_weather
+    weather_type_found.append(found)
+    
+print(weather_type_found)
